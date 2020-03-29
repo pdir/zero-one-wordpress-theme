@@ -1,0 +1,16 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333 !important;
+    color: #fff !important;
+
+    a, a:visited {
+      &:not(.btn) {
+        color: #fff;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

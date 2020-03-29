@@ -1,0 +1,50 @@
+{
+  "name": "pdir/zero-one-wordpress-theme",
+  "type": "package",
+  "description": "0.1 Premium WordPress Theme.",
+  "keywords": [
+    "WordPress",
+    "Themes",
+    "Theme",
+    "ZeroOne",
+    "theme.kitchen",
+    "climate friendly",
+    "energy saving"
+  ],
+  "homepage": "https://github.com/pdir/zero-one-wordpress-theme",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Premium WordPress Themes",
+      "homepage": "https://theme.kitchen",
+      "email" : "help@theme.kitchen",
+      "role" : "Supplier"
+    },
+    {
+      "name": "pdir GmbH",
+      "homepage": "https://pdir.de",
+      "email" : "develop@pdir.de",
+      "role" : "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.6"
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+    "jakub-onderka/php-parallel-lint": "^1.0",
+    "wptrt/wpthemereview": "^0.2.0"
+  },
+  "scripts": {
+    "checkcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --runtime-set testVersion 5.6-",
+    "fixcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf --runtime-set testVersion 5.6-",
+    "lint": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor ."
+  },
+  "support": {
+    "issues": "https://github.com/pdir/zero-one-wordpress-theme/issues",
+    "source": "https://github.com/pdir/zero-one-wordpress-theme",
+    "docs": "https://theme.kitchen/docs/",
+    "forum": "https://theme.kitchen/forum/",
+    "donate": "https://theme.kitchen/sponsoring.html"
+  }
+}

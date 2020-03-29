@@ -1,0 +1,269 @@
+/*
+Theme Name: 0.1 Energy Saving WordPress Theme
+Text Domain: tk-zero-one
+Version: 1.0
+Requires at least: 4.7
+Requires PHP: 5.2.4
+Description: 0.1 is a climate-friendly WordPress theme, which was developed for WordPress >=5.3 with the lightweight CSS framework <a href="https://picturepan2.github.io/spectre/">Spectre.css</a> for the creation of energy-efficient websites. &#12641; It relies on many different practices and technologies that significantly optimize the energy consumption of a website* and their use also results in SEO optimization, performance improvement and increased usability. &#12641; The theme is optimized for all end devices and common browsers and provides the most important modules and elements of WordPress as well as some useful additional elements such as teaser boxes, tabs, a quote and a parallax element and is Gutenberg ready. &#12641; Of course, this theme also has a dark mode, which saves battery power and is easy on the eyes. &#12641; 0.1 is light, fast, focused on important content and at the same time efficient & energy saving - just right for websites with these requirements. * the theme produces only 0.1g CO2 per page view - less than an average website. &#x1f310; <a href="https://docs.theme.kitchen/">Documentation</a> &#12641; Made with &#10084; for WordPress
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Theme URI: https://theme.kitchen/zeroone
+Author: THEME.KITCHEN
+Author URI: https://theme.kitchen/
+License: pdir WordPress Theme License
+License URI: https://theme.kitchen/pdir-wordpress-theme-license.html
+
+Foreign source code
+- This Theme uses SPECTRE.CSS https://picturepan2.github.io/spectre/ which was published under MIT license.
+- This Theme is based on Twenty Twenty https://wordpress.org/themes/twentytwenty/ - Twenty Twenty is licensed under the GPL.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+	0. 	CSS Reset
+	1. 	Document Setup
+	2. 	Element Base
+	3. 	Helper Classes
+	4. 	Site Header
+	5. 	Menu Modal
+	6. 	Search Modal
+	7. 	Page Templates
+		a. 	Template: Cover Template
+		c. 	Template: Full Width
+	8.  Post: Archive
+	9.  Post: Single
+	10. Blocks
+	11. Entry Content
+	12. Comments
+	13. Site Pagination
+	14. Error 404
+	15. Widgets
+	16. Site Footer
+	17. Media Queries
+
+----------------------------------------------------------------------------- */
+
+/******* Mixins, Colors & Schemes *******/
+
+@import "variables";
+@import "mixins";
+@import "utilities";
+
+/* -------------------------------------------------------------------------- */
+
+/*	0. CSS Reset
+/* -------------------------------------------------------------------------- */
+
+@import "normalize";
+@import "base";
+
+/* -------------------------------------------------------------------------- */
+
+/*	1. Document Setup
+/* -------------------------------------------------------------------------- */
+
+@import "wordpress/document";
+@import "layout";
+
+.block {
+  padding: 28px 20px;
+  max-width: 1200px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	2. Element Base
+/* -------------------------------------------------------------------------- */
+
+@import "typography";
+@import "asian";
+@import "tables";
+@import "buttons";
+@import "forms";
+@import "labels";
+@import "codes";
+@import "media";
+
+/* -------------------------------------------------------------------------- */
+
+/*	3. Helper Classes
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	4. Site Header
+/* -------------------------------------------------------------------------- */
+
+@import "wordpress/navbar";
+
+#site-header {
+  background: transparent linear-gradient(99deg, $primary-color-light 0%, $primary-color-dark 100%) 0% 0% no-repeat padding-box;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	5. Document Setup
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	6. Document Setup
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	7. Page Templates
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	7. a Template: Cover Template
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	7. b Template: Full Width
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	8. Post: Archive
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	9. Post: Single
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	10. Blocks
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	11. Entry Content
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	12. Comments
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	13. Site Pagination
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	14. Error 404
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	15. Widgets
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	16. Site Footer
+/* -------------------------------------------------------------------------- */
+
+.footer-nav-widgets-wrapper {
+  background: $footer-background_1;
+  color: $footer-color-1;
+
+  a {
+    color: $footer-color-1;
+  }
+}
+
+footer {
+  .section-inner {
+    background: $footer-background-2;
+    color: $footer-color-2;
+
+    a {
+      color: $footer-color-2;
+    }
+  }
+}
+
+.top-link a {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 90px;
+  height: 90px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: $light-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 46px;
+  background: $zeroOneColor_1;
+  border-radius: 100%;
+  animation: pulse 2s alternate infinite ease-in;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: $zeroOneColor_1;
+    border-radius: 100%;
+    left: -20px;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: $zeroOneColor_1;
+    border-radius: 100%;
+    right: -10px;
+    top: 0;
+    z-index: -1;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &, &:after, &:before {
+      background: lighten($zeroOneColor_2,5%);
+    }
+  }
+}
+
+@keyframes pulse {
+  0%   {transform: scale(.9);}
+  100% {transform: scale(1);}
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+/*	17. Media Queries
+/* -------------------------------------------------------------------------- */
+
