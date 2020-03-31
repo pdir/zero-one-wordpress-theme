@@ -67,8 +67,7 @@ Foreign source code
 @import "layout";
 
 .block {
-  padding: 28px 20px;
-  max-width: 1200px;
+  display: block;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -76,7 +75,7 @@ Foreign source code
 /*	2. Element Base
 /* -------------------------------------------------------------------------- */
 
-@import "typography";
+//@import "typography";
 @import "asian";
 @import "tables";
 @import "buttons";
@@ -108,6 +107,7 @@ Foreign source code
 /*	5. Document Setup
 /* -------------------------------------------------------------------------- */
 
+@import "wordpress/content";
 
 /* -------------------------------------------------------------------------- */
 

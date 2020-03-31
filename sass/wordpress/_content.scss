@@ -1,0 +1,168 @@
+article {
+  max-width: 1240px;
+  padding: 3.5rem 20px;
+  margin: 0 auto;
+}
+
+a:focus, a:hover, a:active, a.active {
+  text-decoration: none;
+}
+
+.entry-categories + .entry-title {
+  margin-top: 10px;
+}
+
+.entry-categories-inner a {
+  background: $zeroOneColor_1;
+  color: $zeroOneColor_5;
+  padding: 4px 10px;
+  border-radius: 25px;
+
+  &:hover {
+    background: $zeroOneColor_4;
+  }
+}
+
+.entry-content > .alignfull {
+  max-width: 100vw;
+  padding: 0;
+  width: calc(100vw - 17px);
+  margin-left: calc(0px - ((100vw - 1200px) / 2) + 8.5px);
+
+  &.has-2-columns {
+    padding: 0 40px;
+  }
+
+  &.wp-block-gallery {
+    margin-bottom: 20px;
+
+    ul, .blocks-gallery-caption {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.featured-media {
+  margin: 0;
+}
+
+main.container {
+  padding: 0;
+}
+
+.meta-icon {
+  opacity: 0.5;
+  padding-right: 8px;
+  padding-top: 1px;
+
+  svg {
+    height: 15px;
+  }
+}
+
+.post-separator {
+  max-width: 1160px;
+  border-color: lighten($gray-color, 30%);
+  border-top: none;
+  clear: both;
+}
+
+ul.post-meta {
+  list-style: none;
+  padding: 0;
+  display: flex;
+
+  li {
+    padding: 0 15px 0 0;
+    display: flex;
+  }
+}
+
+.wp-block-cover {
+  margin-bottom: 20px;
+  width: inherit;
+
+  p:not(.has-text-color) {
+    color: $zeroOneColor_5;
+  }
+
+  &.alignleft {
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+.wp-block-cover-text {
+  font-size: 32px;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(123, 123, 123, 0.5);
+  text-align: center;
+  color: $zeroOneColor_5;
+}
+
+.wp-block-image {
+  margin-left: 0;
+  margin-right: 0;
+
+  .alignright, .alignleft {
+    margin-top: 5px;
+  }
+
+  .aligncenter {
+    width: 100%;
+    text-align: center;
+  }
+
+  figcaption {
+    margin-top: 0;
+  }
+
+  img {
+    vertical-align: bottom;
+  }
+}
+
+a.wp-block-button__link {
+  @extend .btn;
+  border-radius: $border-radius;
+  padding: 5px 60px;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  font-weight: 500;
+  border: none;
+  max-width: 100%;
+  flex-wrap: wrap;
+  white-space: inherit;
+  line-height: 1.2;
+  height: inherit;
+  width: max-content;
+  background-color: $zeroOneColor_2;
+  color: $zeroOneColor_5;
+  transition: background .2s;
+  -webkit-transition: background .2s;
+
+  &:hover {
+    background-color: $zeroOneColor_1;
+  }
+}
+
+.wp-block-quote.is-style-large {
+  background-image: url(/wp-content/themes/zeroone/assets/images/quote.svg);
+  background-repeat: no-repeat;
+  padding: 200px 100px;
+  background-size: contain;
+  font-size: 2em;
+  font-style: italic;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+
+  p {
+    font-size: inherit;
+    line-height: 1.3;
+  }
+}

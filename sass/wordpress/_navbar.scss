@@ -1,3 +1,13 @@
+body:not(.overlay-header) .navbar .primary-menu {
+  > li > a {
+    color: $dark-color;
+  }
+
+  ul {
+    background: none;
+  }
+}
+
 .homepage .navbar {
   position: absolute;
   width: 100%;
@@ -17,22 +27,39 @@
   position: relative;
   width: 100%;
   padding: 0 95px;
+  display: flex;
+  max-width: 100%;
+  min-height: 120px;
+  align-items: center;
 
-  .site-description {
-    display: block;
+  .logo img {
+    padding: 10px 0;
+    width: 132px;
+    height: auto;
   }
 
   .navbar-section {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+
+    &.header-titles {
+      flex-wrap: wrap;
+      margin: 15px 0;
+    }
   }
 
   ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-    list-style-type: none !important;
+    list-style-type: none;
+
+    &.primary-menu {
+      height: 100%;
+      margin: 0;
+      padding-left: 40px;
+    }
 
     > li {
       &:after {
@@ -91,10 +118,12 @@
       z-index: 1;
       flex-wrap: wrap;
       list-style-type: none !important;
+      margin: 0;
 
       a,strong {
         color: $dark-color;
         font-weight: bold;
+        font-size: 18px;
       }
 
       &:hover > ul {
@@ -120,7 +149,7 @@
         text-align: center;
         padding: 3px 0;
 
-        &.active, &.trail {
+        &.active, &.trail, &:hover {
           &:after {
             display: none;
           }
@@ -129,23 +158,46 @@
         a, strong {
           font-size: 18px;
           text-transform: none;
-          padding: 2px 15px;
+          padding: 5px 15px;
           width: auto;
           font-weight: 300;
           border-radius: $border-radius;
+          text-align: left;
+          line-height: 1.1;
         }
 
         strong {
           text-decoration: underline;
         }
       }
+
+      ul {
+        padding: 0 10px 0 0;
+        left: -240px;
+        width: 240px;
+        margin-top: 0;
+        top: 0;
+
+        li {
+          justify-content: flex-end;
+        }
+
+        a, strong {
+          color: $dark-color;
+          background: $light-color;
+        }
+
+        a:hover, a.active {
+          background: $primary-color-dark;
+        }
+      }
     }
 
     > li > ul {
-      margin-left: 0;
       padding: 40px 0;
       width: 240px;
       left: 1em;
+      margin: 0;
 
       a, strong {
         color: $light-color;
@@ -182,10 +234,17 @@
 
   }
 
-  .logo img {
-    padding: 10px 0;
-    width: 132px;
-    height: auto;
+  .site-description {
+    display: block;
+    width: 100%;
+  }
+
+  .site-title {
+    width: 100%;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.5;
   }
 }
 
@@ -194,6 +253,14 @@
 }
 
 .open-dropdown {
+  display: none;
+}
+
+.search-toggle {
+  display: none;
+}
+
+.search-modal {
   display: none;
 }
 
