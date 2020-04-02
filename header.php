@@ -37,7 +37,7 @@
 
 		<header id="site-header" class="header-footer-group bg-sunrise" role="banner">
 
-            <nav class="primary-menu-wrapper navbar block" aria-label="<?php esc_attr_e( 'Horizontal', 'zeroone' ); ?>" role="navigation">
+            <nav class="primary-menu-wrapper navbar block" id="open-nav" aria-label="<?php esc_attr_e( 'Horizontal', 'zeroone' ); ?>" role="navigation">
 
 
                     <section class="header-titles navbar-section">
@@ -54,6 +54,14 @@
 
                     <section class="navbar-section">
 
+                        <a href="#open-nav" class="open-nav" aria-label="Navigation">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </a>
+
+                        <a href="#close-nav" class="close-nav" id="close-nav" aria-label="Close Navigation"></a>
+
                         <?php
                         if ( has_nav_menu( 'primary' ) || ! has_nav_menu( 'expanded' ) ) {
                         ?>
@@ -66,7 +74,7 @@
                                         array(
                                             'container'  => '',
                                             'items_wrap' => '%3$s',
-                                            'theme_location' => 'primary',
+                                            'theme_location' => 'primary'
                                         )
                                     );
 
@@ -78,6 +86,7 @@
                                             'show_sub_menu_icons' => true,
                                             'title_li' => false,
                                             'walker'   => new zeroone_Walker_Page(),
+                                            'link_after' => '<a href="#open-nav" class="open-dropdown"><span>+</span></a>'
                                         )
                                     );
 
@@ -120,7 +129,7 @@
 
                 </div>
 
-				<div class="columns d-hide">
+				<div class="d-none">
 
                     <?php
                         // Output the menu modal.
