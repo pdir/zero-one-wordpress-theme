@@ -120,6 +120,24 @@
     font-size: 22px;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    &.large-headline {
+      font-size: 24px;
+      line-height: 1.2;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    &.headline-dotted {
+      &:before, &:after {
+        width: 100%;
+        height: 60px;
+        line-height: 0.3;
+        padding: 0;
+      }
+    }
+  }
+
   main {
     .form-label {
       width: 100%;

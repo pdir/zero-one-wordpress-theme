@@ -33,6 +33,17 @@ b, strong {
   font-weight: 700;
 }
 
+code {
+  background: $boxes-background;
+  color: inherit;
+  display: block;
+  line-height: 1.5;
+  overflow-x: auto;
+  padding: 1rem;
+  width: 100%;
+  white-space: pre-line;
+}
+
 .column {
   padding-left: 15px;
   padding-right: 15px;
@@ -293,15 +304,31 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+
+    &.has-text-align-center {
+      justify-content: center;
+    }
 
     &:before, &:after {
       content: "...";
       font-size: 60px;
       line-height: 1;
       height: 98px;
-      padding: 0 10px;
     }
+
+    &:before {
+      padding: 0 10px 0 0;
+    }
+
+    &:after {
+      padding: 0 0 0 10px;
+    }
+  }
+
+  &.large-headline {
+    font-size: 35px;
+    line-height: 1.2;
   }
 }
 
@@ -387,6 +414,18 @@ main.container {
   }
 }
 
+.primary-color-dark {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: $zeroOneColor_4;
+  }
+}
+
+.primary-color-light {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: $primary-color-light;
+  }
+}
+
 .post-inner {
   padding: 15px 0;
 }
@@ -452,6 +491,7 @@ ul.post-meta {
 
 .wp-block-button {
   margin: 10px 0;
+  max-width: 100%;
 }
 
 .wp-block-cover {
@@ -546,6 +586,10 @@ ul.post-meta {
 }
 
 .wp-block-latest-posts {
+  &:not(.is-grid) li {
+    padding: 0;
+  }
+
   &.columns-2, &.columns-3, &.columns-4, &.columns-5, &.columns-6 {
     margin-left: -15px;
     margin-right: -15px;
@@ -676,5 +720,17 @@ ul.post-meta {
     text-transform: uppercase;
     font-weight: 700;
     text-decoration: none;
+  }
+}
+
+@media (min-width: 782px) {
+  .wp-block-column:not(:first-child) {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 781px) and (min-width: 600px) {
+  .wp-block-column {
+    flex-basis: auto !important;
   }
 }

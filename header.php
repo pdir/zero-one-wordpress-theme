@@ -74,7 +74,8 @@
                                         array(
                                             'container'  => '',
                                             'items_wrap' => '%3$s',
-                                            'theme_location' => 'primary'
+                                            'theme_location' => 'primary',
+                                            'link_after' => '<a href="#open-nav" class="open-dropdown"><span>+</span></a>'
                                         )
                                     );
 

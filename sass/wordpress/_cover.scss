@@ -1,0 +1,21 @@
+.wp-block-cover {
+  &.has-background-dim:not(.has-background-gradient):before {
+    opacity: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 32px;
+    text-shadow: 1px 1px 3px rgba(123, 123, 123, 0.5);
+    text-align: center;
+  }
+
+  p {
+    font-size: 18px;
+    text-shadow: 1px 1px 3px rgba(123, 123, 123, 0.5);
+  }
+}
+
+.entry-content > .alignfull.wp-block-cover {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
