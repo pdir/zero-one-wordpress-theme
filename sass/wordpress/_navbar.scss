@@ -8,17 +8,11 @@ body:not(.overlay-header) .navbar .primary-menu {
   }
 }
 
-.homepage .navbar {
+.home .navbar {
+  height: inherit;
   position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
 
-  &.bg-sunrise {
-    background: none;
-  }
-
-  .logo img {
+  .navbar-brand img {
     width: inherit;
   }
 }
@@ -27,28 +21,28 @@ body:not(.overlay-header) .navbar .primary-menu {
   display: none;
 }
 
+.navbar-brand img {
+  padding: 10px 0;
+  width: 132px;
+  height: auto;
+}
+
 .navbar {
   position: relative;
   width: 100%;
   padding: 0 95px;
   display: flex;
   max-width: 100%;
-  min-height: 120px;
+  height: 130px;
   align-items: center;
-
-  .logo img {
-    padding: 10px 0;
-    width: 132px;
-    height: auto;
-  }
 
   .navbar-section {
     display: flex;
     flex-direction: column;
 
-    &.header-titles {
-      flex-wrap: wrap;
-      margin: 15px 0;
+    &:nth-of-type(2) {
+      justify-content: flex-end;
+      width: 100%;
     }
   }
 
