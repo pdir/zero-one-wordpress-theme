@@ -1,0 +1,6 @@
+@media (prefers-color-scheme: dark) { /* line 2, ../sass/colour_schemes/dark_mode.scss */
+  body { background: #333 !important; color: #fff !important; }
+  /* line 7, ../sass/colour_schemes/dark_mode.scss */
+  body a:not(.btn), body a:visited:not(.btn) { color: #fff; }
+  /* line 10, ../sass/colour_schemes/dark_mode.scss */
+  body a:not(.btn):hover, body a:visited:not(.btn):hover { color: #fff; } }

@@ -22,10 +22,20 @@
   padding: 10px 0;
 }
 
+input, textarea {
+  &:focus {
+    outline: 0;
+  }
+}
+
 main {
   .form-group {
     display: flex;
     flex-wrap: wrap;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
 
   .form-label {

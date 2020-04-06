@@ -6,6 +6,7 @@
   background-position: top center;
   min-height: 520px;
   font-size: 16px;
+  padding: 100px 24% 0 33%;
 
   a {
     color: $zeroOneColor_5;
@@ -14,32 +15,15 @@
       color: $zeroOneColor_5;
     }
   }
+}
 
-  .wp-block-group {
-    padding: 100px 24% 0 33%;
-  }
-
-  .wp-block-social-links:not(.is-style-logos-only) {
-    .wp-social-link-instagram,
-    .wp-social-link-facebook,
-    .wp-social-link-twitter,
-    .wp-social-link-youtube,
-    .wp-social-link-linkedin {
-      background-color: #fff;
-    }
-  }
-
-  .wp-social-link {
-    width: 24px;
-    height: 24px;
-
-    &:hover {
-      transform: scale(1);
-
-      a:before {
-        background-color: $primary-color-light;
-      }
-    }
+.wp-block-social-links:not(.is-style-logos-only) {
+  .wp-social-link-instagram,
+  .wp-social-link-facebook,
+  .wp-social-link-twitter,
+  .wp-social-link-youtube,
+  .wp-social-link-linkedin {
+    background-color: #fff;
 
     a {
       padding: 0;
@@ -64,6 +48,10 @@
       }
     }
 
+    svg {
+      display: none;
+    }
+
     &.wp-social-link-instagram a:before {
       background-image: url(/wp-content/themes/zeroone/assets/images/icon_instagram.svg);
     }
@@ -81,8 +69,29 @@
       background-image: url(/wp-content/themes/zeroone/assets/images/icon_linkedin.svg);
     }
 
-    svg {
-      display: none;
+    &:hover {
+      transform: scale(1);
+
+      a:before {
+        background-color: $primary-color-light;
+      }
+    }
+  }
+}
+
+.wp-social-link {
+  width: 24px;
+  height: 24px;
+
+  a {
+    padding: 0;
+  }
+
+  &:hover {
+    transform: scale(1);
+
+    a:before {
+      background-color: $primary-color-light;
     }
   }
 }
@@ -98,17 +107,14 @@
     min-height: inherit;
     max-width: 400px;
     margin: 0 auto;
-
-    .wp-block-group {
-      padding: 100px;
-    }
+    padding: 100px;
   }
 
 }
 
 @media (max-width: 600px) {
 
-  .contact-infos .wp-block-group {
+  .contact-infos {
     padding: 100px 80px;
   }
 
@@ -118,10 +124,7 @@
 
   .contact-infos {
     font-size: 14px;
-
-    .wp-block-group {
-      padding: 70px 25%;
-    }
+    padding: 70px 25%;
   }
 
 }
