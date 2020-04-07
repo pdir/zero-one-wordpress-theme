@@ -1935,14 +1935,12 @@ main .wp-block-search .wp-block-search__input:focus { box-shadow: 0px 1px 2px 0 
   .contact-infos { padding: 100px 80px; } }
 @media (max-width: 480px) { /* line 125, sass/wordpress/_contact.scss */
   .contact-infos { font-size: 14px; padding: 70px 25%; } }
-/* line 2, sass/wordpress/_adjust_images.scss */
-.wp-block-latest-posts li:nth-child(odd) img { filter: invert(0) sepia(100%) hue-rotate(5deg) saturate(200%) brightness(95%); }
-/* line 6, sass/wordpress/_adjust_images.scss */
-.wp-block-latest-posts li:nth-child(even) img { filter: invert(0) sepia(100%) hue-rotate(-26deg) saturate(315%) brightness(95%); }
+/*.wp-block-latest-posts { li:nth-child(odd) img { filter: invert(0) sepia(100%) hue-rotate(5deg) saturate(200%) brightness(95%); }
+ li:nth-child(even) img { filter: invert(0) sepia(100%) hue-rotate(-26deg) saturate(315%) brightness(95%); }
+}
 
-/* line 11, sass/wordpress/_adjust_images.scss */
-.type-post .wp-post-image { filter: invert(0) sepia(100%) hue-rotate(5deg) saturate(200%) brightness(95%); }
-
+.type-post .wp-post-image { filter: invert(0) sepia(100%) hue-rotate(5deg) saturate(200%) brightness(95%);
+}*/
 /* -------------------------------------------------------------------------- */
 /*	6. Document Setup
 /* -------------------------------------------------------------------------- */
