@@ -193,7 +193,7 @@ function zeroone_register_styles() {
 	wp_add_inline_style( 'zeroone-style', zeroone_get_customizer_css( 'front-end' ) );
 
 	// Add print CSS.
-	wp_enqueue_style( 'zeroone-print-style', get_template_directory_uri() . '/print.css', null, $theme_version, 'print' );
+	wp_enqueue_style( 'zeroone-print-style', /*get_template_directory_uri() . '/print.css', null, $theme_version, 'print'*/ );
 
 }
 
@@ -210,7 +210,7 @@ function zeroone_register_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_script( 'zeroone-js', get_template_directory_uri() . '/assets/js/index.js', array(), $theme_version, false );
+	wp_enqueue_script( 'zeroone-js', /*get_template_directory_uri() . '/assets/js/index.js', array(), $theme_version, false*/ );
 	wp_script_add_data( 'zeroone-js', 'async', true );
 
 }

@@ -1,0 +1,13 @@
+.wp-block-latest-posts {
+  li:nth-child(odd) img {
+    filter: invert(0) sepia(100%) hue-rotate(5deg) saturate(200%) brightness(95%);
+  }
+
+  li:nth-child(even) img {
+    filter: invert(0) sepia(100%) hue-rotate(-26deg) saturate(315%) brightness(95%);
+  }
+}
+
+.type-post .wp-post-image {
+  filter: invert(0) sepia(100%) hue-rotate(5deg) saturate(200%) brightness(95%);
+}

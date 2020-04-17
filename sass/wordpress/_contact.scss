@@ -1,0 +1,130 @@
+.contact-infos {
+  background-image: url('/wp-content/themes/zeroone/assets/images/navbar_level_2.svg');
+  background-repeat: no-repeat;
+  color: $zeroOneColor_5;
+  background-size: 70% 80%;
+  background-position: top center;
+  min-height: 520px;
+  font-size: 16px;
+  padding: 100px 24% 0 33%;
+
+  a {
+    color: $zeroOneColor_5;
+
+    &:hover {
+      color: $zeroOneColor_5;
+    }
+  }
+}
+
+.wp-block-social-links:not(.is-style-logos-only) {
+  .wp-social-link-instagram,
+  .wp-social-link-facebook,
+  .wp-social-link-twitter,
+  .wp-social-link-youtube,
+  .wp-social-link-linkedin {
+    background-color: #fff;
+
+    a {
+      padding: 0;
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-indent: 0;
+        display: block;
+        background: #fff;
+        border-radius: 100%;
+        background-size: auto 14px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    svg {
+      display: none;
+    }
+
+    &.wp-social-link-instagram a:before {
+      background-image: url(/wp-content/themes/zeroone/assets/images/icon_instagram.svg);
+    }
+    &.wp-social-link-facebook a:before {
+      background-image: url(/wp-content/themes/zeroone/assets/images/icon_facebook.svg);
+    }
+    &.wp-social-link-twitter a:before {
+      background-image: url(/wp-content/themes/zeroone/assets/images/icon_twitter.svg);
+    }
+    &.wp-social-link-youtube a:before {
+      background-image: url(/wp-content/themes/zeroone/assets/images/icon_youtube.svg);
+      background-size: auto 10px;
+    }
+    &.wp-social-link-linkedin a:before {
+      background-image: url(/wp-content/themes/zeroone/assets/images/icon_linkedin.svg);
+    }
+
+    &:hover {
+      transform: scale(1);
+
+      a:before {
+        background-color: $primary-color-light;
+      }
+    }
+  }
+}
+
+.wp-social-link {
+  width: 24px;
+  height: 24px;
+
+  a {
+    padding: 0;
+  }
+
+  &:hover {
+    transform: scale(1);
+
+    a:before {
+      background-color: $primary-color-light;
+    }
+  }
+}
+
+.page-id-14 h1 {
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+
+  .contact-infos {
+    background-size: 100% 100%;
+    min-height: inherit;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 100px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .contact-infos {
+    padding: 100px 80px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .contact-infos {
+    font-size: 14px;
+    padding: 70px 25%;
+  }
+
+}

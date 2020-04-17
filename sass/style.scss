@@ -67,8 +67,7 @@ Foreign source code
 @import "layout";
 
 .block {
-  padding: 28px 20px;
-  max-width: 1200px;
+  display: block;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -76,7 +75,7 @@ Foreign source code
 /*	2. Element Base
 /* -------------------------------------------------------------------------- */
 
-@import "typography";
+//@import "typography";
 @import "asian";
 @import "tables";
 @import "buttons";
@@ -108,6 +107,13 @@ Foreign source code
 /*	5. Document Setup
 /* -------------------------------------------------------------------------- */
 
+@import "wordpress/content";
+@import "wordpress/forms";
+@import "wordpress/hero";
+@import "wordpress/teaser";
+@import "wordpress/cover";
+@import "wordpress/contact";
+//@import "wordpress/adjust_images";
 
 /* -------------------------------------------------------------------------- */
 
@@ -186,75 +192,7 @@ Foreign source code
 /*	16. Site Footer
 /* -------------------------------------------------------------------------- */
 
-.footer-nav-widgets-wrapper {
-  background: $footer-background_1;
-  color: $footer-color-1;
-
-  a {
-    color: $footer-color-1;
-  }
-}
-
-footer {
-  .section-inner {
-    background: $footer-background-2;
-    color: $footer-color-2;
-
-    a {
-      color: $footer-color-2;
-    }
-  }
-}
-
-.top-link a {
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-  width: 90px;
-  height: 90px;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  color: $light-color;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 46px;
-  background: $zeroOneColor_1;
-  border-radius: 100%;
-  animation: pulse 2s alternate infinite ease-in;
-
-  &:before {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background: $zeroOneColor_1;
-    border-radius: 100%;
-    left: -20px;
-    bottom: 0;
-    z-index: -1;
-  }
-
-  &:after {
-    position: absolute;
-    content: "";
-    width: 40px;
-    height: 40px;
-    background: $zeroOneColor_1;
-    border-radius: 100%;
-    right: -10px;
-    top: 0;
-    z-index: -1;
-  }
-
-  &:hover {
-    text-decoration: none;
-
-    &, &:after, &:before {
-      background: lighten($zeroOneColor_2,5%);
-    }
-  }
-}
+@import 'wordpress/footer';
 
 @keyframes pulse {
   0%   {transform: scale(.9);}
@@ -267,3 +205,4 @@ footer {
 /*	17. Media Queries
 /* -------------------------------------------------------------------------- */
 
+@import 'wordpress/responsive';
