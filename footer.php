@@ -37,6 +37,7 @@
 							<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'zeroone' ) ); ?>">
 								<?php _e( 'Powered by WordPress', 'zeroone' ); ?>
 							</a> |
+                            <?php /* !!! Your are not allowed to remove the link to theme.kitchen website (copyright notice) until you buy a domain license. https://theme.kitchen/zeroone !!! */ ?>
                             <a href="<?php echo esc_url( __( 'https://theme.kitchen/wordpress-themes/', 'zeroone' ) ); ?>">
                                 <?php _e( '0.1 Energy Saving WordPress Theme', 'zeroone' ); ?>
                             </a>

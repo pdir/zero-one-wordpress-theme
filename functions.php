@@ -2,7 +2,7 @@
 /**
  * Zero One functions and definitions
  *
- * @link https://theme.kitchen/zero-one
+ * @link https://theme.kitchen/zeroone
  *
  * @package zero-one-wordpress-theme
  * @author theme.kitchen / pdir GmbH
